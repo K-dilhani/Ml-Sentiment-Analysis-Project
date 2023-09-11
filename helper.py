@@ -10,17 +10,17 @@ ps = PorterStemmer()
 
 
 #load model
-with open('D:/Projects/Pyhton_Projects/Machine learning project/Ml-Sentiment-Analysis-Project/static/model/corpora/model.pickle', 'rb') as f:
+with open('static/model/corpora/model.pickle', 'rb') as f:
     model = pickle.load(f)
 
 
 #load stopwods 
-with open('D:/Projects/Pyhton_Projects/Machine learning project/Ml-Sentiment-Analysis-Project/static/model/corpora/stopwords/english', 'r') as file:
+with open('static/model/corpora/stopwords/english', 'r') as file:
     sw = file.read().splitlines()
 
 
 #load token
-vocab = pd.read_csv('D:/Projects/Pyhton_Projects/Machine learning project/Ml-Sentiment-Analysis-Project/static/model/corpora/vocabulary.txt', header=None)
+vocab = pd.read_csv('static/model/corpora/vocabulary.txt', header=None)
 token = vocab[0].tolist()
 
 
